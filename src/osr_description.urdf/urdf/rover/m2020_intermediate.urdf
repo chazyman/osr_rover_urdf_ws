@@ -1,0 +1,400 @@
+<?xml version="1.0" ?>
+<!-- This file was generated automatically. [2021_08_18_14_10_08] -->
+<!-- [Tool url: git@github.jpl.nasa.gov:CR/rst.git, branch: dev/working, commit_hash: 47e8686b, commit_time: 2021-08-16 19:00:50 -0700] -->
+
+<robot name="Perseverance">
+	<link name="ground"/>
+
+	<link name="Body_Chassis">
+		<inertial>
+			<origin xyz="0.09002 0 -1.13338" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_CHASSIS">
+			<origin xyz="0.09002 0 -1.13338" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/CHASSIS.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="chasis_joint" type="fixed">
+		<origin xyz="0 0 0" rpy="${radians(180)} 0 0"/>
+		<parent link="ground"/>
+		<child link="Body_Chassis"/>
+	</joint>
+
+
+	<!-- Rover Left Side Traction -->
+	<link name="Body_Differential">
+		<inertial>
+			<origin xyz="0.142 0 0" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_CenterDifferential">
+			<origin xyz="0.142 0 0" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/CenterDifferential.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="CENTER_DIFFERENTIAL" type="revolute">
+		<origin xyz="-0.05198 0 -1.13338" rpy="0 -0 0"/>
+		<parent link="Body_Chassis"/>
+		<child link="Body_Differential"/>
+		<axis xyz="0 0 1"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_RockerLeft">
+		<inertial>
+			<origin xyz="-0.214 0.79959 -0.2405" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Left_Rocker">
+			<origin xyz="-0.214 0.79959 -0.2405" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Left_Rocker.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="LEFT_DIFFERENTIAL" type="revolute">
+		<origin xyz="0.30402 -0.79959 -0.89288" rpy="0 -0 0"/>
+		<parent link="Body_Chassis"/>
+		<child link="Body_RockerLeft"/>
+		<axis xyz="0 1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_BogieLeft">
+		<inertial>
+			<origin xyz="0.54 0.91959 -0.4705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Left_Bogie">
+			<origin xyz="0.54 0.91959 -0.4705" rpy="0 0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Left_Bogie.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="LEFT_BOGIE" type="revolute">
+		<origin xyz="-0.754 -0.12 0.23" rpy="0 -0 0"/>
+		<parent link="Body_RockerLeft"/>
+		<child link="Body_BogieLeft"/>
+		<axis xyz="0 1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<!-- Left Middle Wheel Assembly (Attached to Body_BogieLeft) -->
+	<link name="Body_WheelLeftMiddle">
+		<inertial>
+			<origin xyz="0.09002 1.1845 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Wheel_LeftMiddle">
+			<origin xyz="0.09002 1.1845 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Wheel_LeftMiddle.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="LM_DRIVE" type="revolute">
+		<origin xyz="0.44998 -0.26491 0.4" rpy="0 -0 0"/>
+		<parent link="Body_BogieLeft"/>
+		<child link="Body_WheelLeftMiddle"/>
+		<axis xyz="0 -1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Frame_WHEEL_LF">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+	</link>
+	<joint name="Joint_for_Frame_WHEEL_LF" type="fixed">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_WheelLeftFront"/>
+		<child link="Frame_WHEEL_LF"/>
+	</joint>
+
+	<link name="Frame_WHEEL_LM">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+	</link>
+	<joint name="Joint_for_Frame_WHEEL_LM" type="fixed">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_WheelLeftMiddle"/>
+		<child link="Frame_WHEEL_LM"/>
+	</joint>
+
+	<link name="Frame_WHEEL_LR">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+	</link>
+	<joint name="Joint_for_Frame_WHEEL_LR" type="fixed">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_WheelLeftRear"/>
+		<child link="Frame_WHEEL_LR"/>
+	</joint>
+
+	<link name="Frame_STEER_LR">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+	</link>
+	<joint name="Joint_for_Frame_STEER_LR" type="fixed">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_SteerLeftRear"/>
+		<child link="Frame_STEER_LR"/>
+	</joint>
+
+	<!-- Left Front Steering Wheel Assembly (Attached to Body_RockerLeft) -->
+	<link name="Body_SteerLeftFront">
+		<inertial>
+			<origin xyz="-1.095 1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Steer_LeftFront">
+			<origin xyz="-1.095 1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Steer_LeftFront.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="LF_STEER" type="revolute">
+		<origin xyz="0.881 -0.26291 0.63" rpy="0 -0 0"/>
+		<parent link="Body_RockerLeft"/>
+		<child link="Body_SteerLeftFront"/>
+		<axis xyz="0 0 1"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>	
+
+	<link name="Body_WheelLeftFront">
+		<inertial>
+			<origin xyz="-1.095 1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Wheel_LeftFront">
+			<origin xyz="-1.095 1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Wheel_LeftFront.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="LF_DRIVE" type="revolute">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_SteerLeftFront"/>
+		<child link="Body_WheelLeftFront"/>
+		<axis xyz="0 -1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<!-- Left Rear Steer Wheel Assembly (Attached to Body_BogieLeft) -->
+	<link name="Body_SteerLeftRear">
+		<inertial>
+			<origin xyz="1.165 1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Steer_LeftRear">
+			<origin xyz="1.165 1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Steer_LeftRear.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="LR_STEER" type="revolute">
+		<origin xyz="-0.625 -0.14291 0.4" rpy="0 -0 0"/>
+		<parent link="Body_BogieLeft"/>
+		<child link="Body_SteerLeftRear"/>
+		<axis xyz="0 0 1"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_WheelLeftRear">
+		<inertial>
+			<origin xyz="1.165 1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Wheel_LeftRear">
+			<origin xyz="1.165 1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Wheel_LeftRear.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="LR_DRIVE" type="revolute">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_SteerLeftRear"/>
+		<child link="Body_WheelLeftRear"/>
+		<axis xyz="0 -1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<!-- Rover Right Side Traction -->
+	<link name="Body_RockerRight">
+		<inertial>
+			<origin xyz="-0.214 -0.79959 -0.2405" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Right_Rocker">
+			<origin xyz="-0.214 -0.79959 -0.2405" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Right_Rocker.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="RIGHT_DIFFERENTIAL" type="revolute">
+		<origin xyz="0.30402 0.79959 -0.89288" rpy="0 -0 0"/>
+		<parent link="Body_Chassis"/>
+		<child link="Body_RockerRight"/>
+		<axis xyz="0 1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_BogieRight">
+		<inertial>
+			<origin xyz="0.54 -0.91959 -0.4705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Right_Bogie">
+			<origin xyz="0.54 -0.91959 -0.4705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Right_Bogie.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="RIGHT_BOGIE" type="revolute">
+		<origin xyz="-0.754 0.12 0.23" rpy="0 -0 0"/>
+		<parent link="Body_RockerRight"/>
+		<child link="Body_BogieRight"/>
+		<axis xyz="0 1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_SteerRightRear">
+		<inertial>
+			<origin xyz="1.165 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Steer_RightRear">
+			<origin xyz="1.165 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Steer_RightRear.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="RR_STEER" type="revolute">
+		<origin xyz="-0.625 0.14291 0.4" rpy="0 -0 0"/>
+		<parent link="Body_BogieRight"/>
+		<child link="Body_SteerRightRear"/>
+		<axis xyz="0 0 1"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_WheelRightRear">
+		<inertial>
+			<origin xyz="1.165 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Wheel_RightRear">
+			<origin xyz="1.165 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Wheel_RightRear.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="RR_DRIVE" type="revolute">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_SteerRightRear"/>
+		<child link="Body_WheelRightRear"/>
+		<axis xyz="0 -1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_WheelRightMiddle">
+		<inertial>
+			<origin xyz="0.09002 -1.1845 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Wheel_RightMiddle">
+			<origin xyz="0.09002 -1.1845 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Wheel_RightMiddle.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="RM_DRIVE" type="revolute">
+		<origin xyz="0.44998 0.26491 0.4" rpy="0 -0 0"/>
+		<parent link="Body_BogieRight"/>
+		<child link="Body_WheelRightMiddle"/>
+		<axis xyz="0 -1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_SteerRightFront">
+		<inertial>
+			<origin xyz="-1.095 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Steer_RightFront">
+			<origin xyz="-1.095 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Steer_RightFront.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="RF_STEER" type="revolute">
+		<origin xyz="0.881 0.26291 0.63" rpy="0 -0 0"/>
+		<parent link="Body_RockerRight"/>
+		<child link="Body_SteerRightFront"/>
+		<axis xyz="0 0 1"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+	<link name="Body_WheelRightFront">
+		<inertial>
+			<origin xyz="-1.095 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<mass value="0"/>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+		</inertial>
+		<visual name="VisGeom_Wheel_RightFront">
+			<origin xyz="-1.095 -1.0625 -0.8705" rpy="0 -0 0"/>
+			<geometry>
+				<mesh filename="package://osr_description/meshes/Wheel_RightFront.stl" scale="1 1 1"/>
+			</geometry>
+		</visual>
+	</link>
+	<joint name="RF_DRIVE" type="revolute">
+		<origin xyz="0 0 0" rpy="0 -0 0"/>
+		<parent link="Body_SteerRightFront"/>
+		<child link="Body_WheelRightFront"/>
+		<axis xyz="0 -1 0"/>
+		<limit lower="-1.79769e+308" upper="1.79769e+308" effort="1.79769e+308" velocity="1.79769e+308"/>
+	</joint>
+
+</robot>

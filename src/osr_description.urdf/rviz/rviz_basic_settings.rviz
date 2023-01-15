@@ -1,0 +1,1055 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /RobotModel1
+        - /TF1
+        - /TF1/Frames1
+      Splitter Ratio: 0.5
+    Tree Height: 617
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/RobotModel
+      Collision Enabled: false
+      Description File: ""
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled:
+          {}
+        Body_BogieLeft:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_BogieRight:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_Chassis:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_CorerFeed:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_Differential:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_HGA_AZ:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_HGA_EL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_MHS_DebrisShield:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RA_Base:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RA_Link1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RA_Link2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RA_Link3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RA_Link4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RA_Link5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RSM_AZ:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RSM_EL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RockerLeft:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_RockerRight:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_SHERLOC_Cap:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_StabilizerFar:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_StabilizerNear:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_SteerLeftFront:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_SteerLeftRear:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_SteerRightFront:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_SteerRightRear:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_Turret:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_WATSON_Cap:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_WheelLeftFront:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_WheelLeftMiddle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_WheelLeftRear:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_WheelRightFront:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_WheelRightMiddle:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Body_WheelRightRear:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Frame_ANT:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ATS1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ATS2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ATS3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ATS4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ATS5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_BOGIE_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_BOGIE_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_CAL_MC1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_CAL_MC2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_CAL_PIXL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_CAL_SC:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_CAL_SHERLOC:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_DIFF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_DOCKING_POST:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_DRILL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FCS:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC1_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC2_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC3_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHC4_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_FHCB:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_GDRT:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_HGAG:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_HGAS:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_HS:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ICU:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_MAZ:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_MCL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_MCR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_MEL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_MI:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_MOXIE:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_NCL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_NCL_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_NCR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_NCR_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_PIXL:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RA1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RA2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RA3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RA4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RA5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RA6:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RA_BASE:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RDS:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RHC1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RHC1_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RHC2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RHC2_FOV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RIMFAX:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RIMUA:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RIMUB:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RMECH:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_RNAV:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ROCKER_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_ROCKER_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_SCI:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_SCIR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_SCLIBS:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_SCRMI:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_SHERLOC:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_STEER_LF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_STEER_LR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_STEER_RF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_STEER_RR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_TIRS:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_TURRET:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WATSON:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WHEEL_LF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WHEEL_LM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WHEEL_LR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WHEEL_RF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WHEEL_RM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WHEEL_RR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WS1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_WS2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Link Tree Style: Links in Alphabetic Order
+        ground:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        Body_BogieLeft:
+          Value: true
+        Body_BogieRight:
+          Value: true
+        Body_Chassis:
+          Value: true
+        Body_CorerFeed:
+          Value: true
+        Body_Differential:
+          Value: true
+        Body_HGA_AZ:
+          Value: true
+        Body_HGA_EL:
+          Value: true
+        Body_MHS_DebrisShield:
+          Value: true
+        Body_RA_Base:
+          Value: true
+        Body_RA_Link1:
+          Value: true
+        Body_RA_Link2:
+          Value: true
+        Body_RA_Link3:
+          Value: true
+        Body_RA_Link4:
+          Value: true
+        Body_RA_Link5:
+          Value: true
+        Body_RSM_AZ:
+          Value: true
+        Body_RSM_EL:
+          Value: true
+        Body_RockerLeft:
+          Value: true
+        Body_RockerRight:
+          Value: true
+        Body_SHERLOC_Cap:
+          Value: true
+        Body_StabilizerFar:
+          Value: true
+        Body_StabilizerNear:
+          Value: true
+        Body_SteerLeftFront:
+          Value: true
+        Body_SteerLeftRear:
+          Value: true
+        Body_SteerRightFront:
+          Value: true
+        Body_SteerRightRear:
+          Value: true
+        Body_Turret:
+          Value: true
+        Body_WATSON_Cap:
+          Value: true
+        Body_WheelLeftFront:
+          Value: true
+        Body_WheelLeftMiddle:
+          Value: true
+        Body_WheelLeftRear:
+          Value: true
+        Body_WheelRightFront:
+          Value: true
+        Body_WheelRightMiddle:
+          Value: true
+        Body_WheelRightRear:
+          Value: true
+        Frame_ANT:
+          Value: true
+        Frame_ATS1:
+          Value: true
+        Frame_ATS2:
+          Value: true
+        Frame_ATS3:
+          Value: true
+        Frame_ATS4:
+          Value: true
+        Frame_ATS5:
+          Value: true
+        Frame_BOGIE_L:
+          Value: true
+        Frame_BOGIE_R:
+          Value: true
+        Frame_CAL_MC1:
+          Value: true
+        Frame_CAL_MC2:
+          Value: true
+        Frame_CAL_PIXL:
+          Value: true
+        Frame_CAL_SC:
+          Value: true
+        Frame_CAL_SHERLOC:
+          Value: true
+        Frame_DIFF:
+          Value: true
+        Frame_DOCKING_POST:
+          Value: true
+        Frame_DRILL:
+          Value: true
+        Frame_FCS:
+          Value: true
+        Frame_FHC1:
+          Value: true
+        Frame_FHC1_FOV:
+          Value: true
+        Frame_FHC2:
+          Value: true
+        Frame_FHC2_FOV:
+          Value: true
+        Frame_FHC3:
+          Value: true
+        Frame_FHC3_FOV:
+          Value: true
+        Frame_FHC4:
+          Value: true
+        Frame_FHC4_FOV:
+          Value: true
+        Frame_FHCB:
+          Value: true
+        Frame_GDRT:
+          Value: true
+        Frame_HGAG:
+          Value: true
+        Frame_HGAS:
+          Value: true
+        Frame_HS:
+          Value: true
+        Frame_ICU:
+          Value: true
+        Frame_MAZ:
+          Value: true
+        Frame_MCL:
+          Value: true
+        Frame_MCR:
+          Value: true
+        Frame_MEL:
+          Value: true
+        Frame_MI:
+          Value: true
+        Frame_MOXIE:
+          Value: true
+        Frame_NCL:
+          Value: true
+        Frame_NCL_FOV:
+          Value: true
+        Frame_NCR:
+          Value: true
+        Frame_NCR_FOV:
+          Value: true
+        Frame_PIXL:
+          Value: true
+        Frame_RA1:
+          Value: true
+        Frame_RA2:
+          Value: true
+        Frame_RA3:
+          Value: true
+        Frame_RA4:
+          Value: true
+        Frame_RA5:
+          Value: true
+        Frame_RA6:
+          Value: true
+        Frame_RA_BASE:
+          Value: true
+        Frame_RDS:
+          Value: true
+        Frame_RHC1:
+          Value: true
+        Frame_RHC1_FOV:
+          Value: true
+        Frame_RHC2:
+          Value: true
+        Frame_RHC2_FOV:
+          Value: true
+        Frame_RIMFAX:
+          Value: true
+        Frame_RIMUA:
+          Value: true
+        Frame_RIMUB:
+          Value: true
+        Frame_RMECH:
+          Value: true
+        Frame_RNAV:
+          Value: true
+        Frame_ROCKER_L:
+          Value: true
+        Frame_ROCKER_R:
+          Value: true
+        Frame_SCI:
+          Value: true
+        Frame_SCIR:
+          Value: true
+        Frame_SCLIBS:
+          Value: true
+        Frame_SCRMI:
+          Value: true
+        Frame_SHERLOC:
+          Value: true
+        Frame_STEER_LF:
+          Value: true
+        Frame_STEER_LR:
+          Value: true
+        Frame_STEER_RF:
+          Value: true
+        Frame_STEER_RR:
+          Value: true
+        Frame_TIRS:
+          Value: true
+        Frame_TURRET:
+          Value: true
+        Frame_WATSON:
+          Value: true
+        Frame_WHEEL_LF:
+          Value: true
+        Frame_WHEEL_LM:
+          Value: true
+        Frame_WHEEL_LR:
+          Value: true
+        Frame_WHEEL_RF:
+          Value: true
+        Frame_WHEEL_RM:
+          Value: true
+        Frame_WHEEL_RR:
+          Value: true
+        Frame_WS1:
+          Value: true
+        Frame_WS2:
+          Value: true
+        ground:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: false
+      Show Axes: true
+      Show Names: true
+      Tree:
+        ground:
+          Body_Chassis:
+            Body_Differential:
+              Frame_DIFF:
+                {}
+            Body_HGA_AZ:
+              Body_HGA_EL:
+                Frame_ANT:
+                  {}
+              Frame_HGAG:
+                {}
+            Body_MHS_DebrisShield:
+              {}
+            Body_RA_Base:
+              Body_RA_Link1:
+                Body_RA_Link2:
+                  Body_RA_Link3:
+                    Body_RA_Link4:
+                      Body_RA_Link5:
+                        Body_Turret:
+                          Body_CorerFeed:
+                            {}
+                          Body_SHERLOC_Cap:
+                            {}
+                          Body_StabilizerFar:
+                            {}
+                          Body_StabilizerNear:
+                            {}
+                          Body_WATSON_Cap:
+                            {}
+                        Frame_DOCKING_POST:
+                          {}
+                        Frame_DRILL:
+                          {}
+                        Frame_FCS:
+                          {}
+                        Frame_GDRT:
+                          {}
+                        Frame_PIXL:
+                          {}
+                        Frame_RA5:
+                          {}
+                        Frame_RA6:
+                          {}
+                        Frame_SHERLOC:
+                          {}
+                        Frame_TURRET:
+                          {}
+                        Frame_WATSON:
+                          {}
+                      Frame_RA4:
+                        {}
+                    Frame_RA3:
+                      {}
+                  Frame_RA2:
+                    {}
+                Frame_CAL_PIXL:
+                  {}
+                Frame_RA1:
+                  {}
+            Body_RSM_AZ:
+              Body_RSM_EL:
+                Frame_MCL:
+                  {}
+                Frame_MCR:
+                  {}
+                Frame_MEL:
+                  {}
+                Frame_NCL:
+                  {}
+                Frame_NCL_FOV:
+                  {}
+                Frame_NCR:
+                  {}
+                Frame_NCR_FOV:
+                  {}
+                Frame_SCI:
+                  {}
+                Frame_SCIR:
+                  {}
+                Frame_SCLIBS:
+                  {}
+                Frame_SCRMI:
+                  {}
+              Frame_MAZ:
+                {}
+            Body_RockerLeft:
+              Body_BogieLeft:
+                Body_SteerLeftRear:
+                  Body_WheelLeftRear:
+                    Frame_WHEEL_LR:
+                      {}
+                  Frame_STEER_LR:
+                    {}
+                Body_WheelLeftMiddle:
+                  Frame_WHEEL_LM:
+                    {}
+                Frame_BOGIE_L:
+                  {}
+              Body_SteerLeftFront:
+                Body_WheelLeftFront:
+                  Frame_WHEEL_LF:
+                    {}
+                Frame_STEER_LF:
+                  {}
+              Frame_ROCKER_L:
+                {}
+            Body_RockerRight:
+              Body_BogieRight:
+                Body_SteerRightRear:
+                  Body_WheelRightRear:
+                    Frame_WHEEL_RR:
+                      {}
+                  Frame_STEER_RR:
+                    {}
+                Body_WheelRightMiddle:
+                  Frame_WHEEL_RM:
+                    {}
+                Frame_BOGIE_R:
+                  {}
+              Body_SteerRightFront:
+                Body_WheelRightFront:
+                  Frame_WHEEL_RF:
+                    {}
+                Frame_STEER_RF:
+                  {}
+              Frame_ROCKER_R:
+                {}
+            Frame_ATS1:
+              {}
+            Frame_ATS2:
+              {}
+            Frame_ATS3:
+              {}
+            Frame_ATS4:
+              {}
+            Frame_ATS5:
+              {}
+            Frame_CAL_MC1:
+              {}
+            Frame_CAL_MC2:
+              {}
+            Frame_CAL_SC:
+              {}
+            Frame_CAL_SHERLOC:
+              {}
+            Frame_FHC1:
+              {}
+            Frame_FHC1_FOV:
+              {}
+            Frame_FHC2:
+              {}
+            Frame_FHC2_FOV:
+              {}
+            Frame_FHC3:
+              {}
+            Frame_FHC3_FOV:
+              {}
+            Frame_FHC4:
+              {}
+            Frame_FHC4_FOV:
+              {}
+            Frame_FHCB:
+              {}
+            Frame_HGAS:
+              {}
+            Frame_HS:
+              {}
+            Frame_ICU:
+              {}
+            Frame_MI:
+              {}
+            Frame_MOXIE:
+              {}
+            Frame_RA_BASE:
+              {}
+            Frame_RDS:
+              {}
+            Frame_RHC1:
+              {}
+            Frame_RHC1_FOV:
+              {}
+            Frame_RHC2:
+              {}
+            Frame_RHC2_FOV:
+              {}
+            Frame_RIMFAX:
+              {}
+            Frame_RIMUA:
+              {}
+            Frame_RIMUB:
+              {}
+            Frame_RMECH:
+              {}
+            Frame_RNAV:
+              {}
+            Frame_TIRS:
+              {}
+            Frame_WS1:
+              {}
+            Frame_WS2:
+              {}
+      Update Interval: 0
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: Body_Chassis
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /clicked_point
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 4.434264183044434
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.31193429231643677
+        Y: 0.11948385089635849
+        Z: -0.4807402193546295
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.490397572517395
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 1.0503965616226196
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 846
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000040000000000000156000002f4fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000002f4000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002f4fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d000002f4000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d006501000000000000045000000000000000000000023f000002f400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1200
+  X: 246
+  Y: 77
