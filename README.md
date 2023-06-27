@@ -10,8 +10,8 @@ colcon build --symlink-install
 source install/setup.sh  
 
 ## Launch Rover URDF
-ros2 launch osr_description perseverance_rover_with_params.launch.py urdf_model:=`ros2 pkg prefix --share osr_description`/urdf/rover/m2020_all.urdf  
+ros2 launch osr_description perseverance_rover_with_params.launch.py urdf_model:=\`ros2 pkg prefix --share osr_description\`/urdf/rover/m2020_all.urdf  
   
 -- or --  
-ros2 launch osr_description perseverance_rover_with_params.launch.py urdf_model:=`ros2 pkg prefix --share osr_description`/urdf/rover/m2020_rover_flipped.urdf  
+ros2 launch osr_description perseverance_rover_with_params.launch.py urdf_model:=\`ros2 pkg prefix --share osr_description\`/urdf/rover/m2020_rover_flipped.urdf  
 
